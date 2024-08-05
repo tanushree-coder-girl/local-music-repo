@@ -1,0 +1,42 @@
+.flex {
+    display: flex;
+}
+
+.gap-4 {
+    gap: 14px;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.light-svg {
+    filter: invert(1);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
