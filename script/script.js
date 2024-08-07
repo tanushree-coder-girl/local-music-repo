@@ -184,8 +184,8 @@ const getAlbums = async () => {
             const songsData = await songsRes.text();
             const songsArray = Array.from(new DOMParser().parseFromString(songsData, 'text/html').querySelectorAll('a'))
                 .map(anchor => anchor.getAttribute('href'))
-                .filter(href => href && href.startsWith('/albums/'));
-
+                .filter(href => href && href.startsWith('/albums/'))
+                .filter(href => /\.(mp3|wav|ogg)$/.test(href));
             allSongArray.push(songsArray);
             songlist.innerHTML = songsArray.map(song => {
                 const songName = song.split('/').pop().split('.').slice(0, -1).join('.');
@@ -224,7 +224,8 @@ const getAlbums = async () => {
                 const songsData = await songsRes.text();
                 const songsArray = Array.from(new DOMParser().parseFromString(songsData, 'text/html').querySelectorAll('a'))
                     .map(anchor => anchor.getAttribute('href'))
-                    .filter(href => href && href.startsWith('/albums/'));
+                    .filter(href => href && href.startsWith('/albums/'))
+                    .filter(href => /\.(mp3|wav|ogg)$/.test(href));
 
                 allSongArray = [songsArray];
                 songlist.innerHTML = songsArray.map(song => {
