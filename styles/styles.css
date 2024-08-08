@@ -18,8 +18,10 @@
 }
 
 body {
+    word-break: break-word;
     background: #000;
 }
+
 
 aside {
     height: 100vh;
@@ -272,6 +274,7 @@ main .container {
     padding: 10px;
     cursor: pointer;
     margin-bottom: 10px;
+    word-break: break-word;
 }
 
 .song div:first-child {
